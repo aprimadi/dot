@@ -6,6 +6,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rking/ag.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'majutsushi/tagbar'
+Plug 'rakr/vim-two-firewatch'
 call plug#end()
 
 colo two-firewatch
