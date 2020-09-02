@@ -40,3 +40,8 @@ let g:tagbar_type_scala = {
 
 " Shortcuts
 nmap <F8> :TagbarToggle<CR>
+if has('macunix')
+  nmap <D-p> :FZF<CR>
+else
+  nmap <c-p> :FZF<CR>
+endif
