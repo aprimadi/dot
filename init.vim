@@ -9,6 +9,7 @@ Plug 'majutsushi/tagbar'
 Plug 'rakr/vim-two-firewatch'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'liuchengxu/vista.vim'
 call plug#end()
 
 colo two-firewatch
@@ -22,6 +23,10 @@ set foldlevel=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tagbar#flags = 'f'  " show full tag hierarchy
+
+" Vista setting
+let g:vista#renderer#enable_icon = 0
+let g:vista_icon_indent = ["", ""]
 
 " Tagbar setting
 let g:tagbar_type_scala = {
@@ -42,6 +47,8 @@ let g:tagbar_type_scala = {
 \ }
 
 " Shortcuts
+nmap <F5> :Vista coc<CR>
+nmap <F6> :Vista!<CR>
 nmap <F8> :TagbarToggle<CR>
 if has('macunix')
   nmap <D-p> :FZF<CR>
