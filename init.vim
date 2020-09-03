@@ -29,6 +29,7 @@ let g:airline#extensions#tagbar#flags = 'f'  " show full tag hierarchy
 " Vista setting
 let g:vista#renderer#enable_icon = 0
 let g:vista_icon_indent = ["", ""]
+let g:vista_sidebar_width = 60
 
 " Tagbar setting
 let g:tagbar_type_scala = {
