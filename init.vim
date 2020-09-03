@@ -10,6 +10,8 @@ Plug 'rakr/vim-two-firewatch'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 colo two-firewatch
@@ -47,6 +49,7 @@ let g:tagbar_type_scala = {
 \ }
 
 " Shortcuts
+nmap <F3> :NERDTreeToggle<CR>
 nmap <F5> :Vista coc<CR>
 nmap <F6> :Vista!<CR>
 nmap <F8> :TagbarToggle<CR>
