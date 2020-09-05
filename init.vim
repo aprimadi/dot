@@ -13,9 +13,14 @@ Plug 'liuchengxu/vista.vim'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'blueshirts/darcula'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
-colo two-firewatch
+set background=light
+" colo two-firewatch
+" colo darcula
+colo solarized
 
 " Folding
 set foldmethod=indent   
