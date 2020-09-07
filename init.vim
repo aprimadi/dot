@@ -15,12 +15,13 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'blueshirts/darcula'
 Plug 'altercation/vim-colors-solarized'
+Plug 'joeytwiddle/sexy_scroller.vim'
 call plug#end()
 
-set background=light
-" colo two-firewatch
+set background=dark
+colo two-firewatch
 " colo darcula
-colo solarized
+" colo solarized
 
 " Folding
 set foldmethod=indent   
@@ -28,7 +29,7 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tagbar#flags = 'f'  " show full tag hierarchy
 
