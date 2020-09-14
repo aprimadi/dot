@@ -16,9 +16,11 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'blueshirts/darcula'
 Plug 'altercation/vim-colors-solarized'
 Plug 'joeytwiddle/sexy_scroller.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
-set background=dark
+set background=light
 colo two-firewatch
 " colo darcula
 " colo solarized
@@ -28,6 +30,15 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
+let g:typescript_indent_disable = 1
 
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
