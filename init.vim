@@ -1,4 +1,8 @@
-call plug#begin(stdpath('data') . '/plugged')
+if has('nvim')
+  call plug#begin(stdpath('data') . '/plugged')
+else
+  call plug#begin('~/.vim/plugged')
+endif
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -20,9 +24,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
-set background=light
+" set background=light
 colo two-firewatch
-" colo darcula
+colo darcula
 " colo solarized
 
 " Folding
