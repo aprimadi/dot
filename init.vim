@@ -13,7 +13,6 @@ Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'joeytwiddle/sexy_scroller.vim'
 Plug 'leafgarland/typescript-vim'
