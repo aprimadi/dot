@@ -25,7 +25,7 @@ Plug 'ajmwagar/vim-deus'
 Plug 'ayu-theme/ayu-vim'
 
 let g:cocPlugInstall = 'yarn install --frozen-lockfile'
-Plug 'neoclide/coc-explorer', { 'tag': 'v0.13.11', 'do': cocPlugInstall }
+Plug 'weirongxu/coc-explorer', { 'tag': 'v0.13.11', 'do': cocPlugInstall }
 call plug#end()
 
 " set background=light
