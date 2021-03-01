@@ -10,24 +10,37 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rking/ag.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'majutsushi/tagbar'
-Plug 'rakr/vim-two-firewatch'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
-Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'blueshirts/darcula'
-Plug 'altercation/vim-colors-solarized'
 Plug 'joeytwiddle/sexy_scroller.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+" color schemes
+Plug 'rakr/vim-two-firewatch'
+Plug 'blueshirts/darcula'
+Plug 'altercation/vim-colors-solarized'
+Plug 'ajmwagar/vim-deus'
+Plug 'ayu-theme/ayu-vim'
+
+let g:cocPlugInstall = 'yarn install --frozen-lockfile'
+Plug 'neoclide/coc-explorer', { 'tag': 'v0.13.11', 'do': cocPlugInstall }
 call plug#end()
 
 " set background=light
 colo two-firewatch
-colo darcula
+" colo darcula
 " colo solarized
+" colo deus
+" let ayucolor="light"
+" let ayucolor="mirage"
+" let ayucolor="dark"
+" colo ayu
+
+" Line numbering
+set nu
 
 " Folding
 set foldmethod=indent   
@@ -38,6 +51,12 @@ set foldlevel=2
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" check for and load file changes
+autocmd WinEnter,BufWinEnter,FocusGained * checktime
+
+" disable swapfile
+set noswapfile
 
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
@@ -71,8 +90,10 @@ let g:tagbar_type_scala = {
     \ ]
 \ }
 
+" indentLine setting
+let g:indentLine_setConceal = 0
+
 " Shortcuts
-nmap <F3> :NERDTreeToggle<CR>
 nmap <F5> :Vista coc<CR>
 nmap <F6> :Vista!<CR>
 nmap <F8> :TagbarToggle<CR>
@@ -81,6 +102,7 @@ if has('macunix')
 else
   nmap <c-p> :FZF<CR>
 endif
+nmap <space>e :CocCommand explorer<CR>
 
 
 
@@ -191,7 +213,7 @@ nnoremap <leader>cl :<C-u>call CocActionAsync('codeLensAction')<CR>
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
