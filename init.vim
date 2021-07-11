@@ -1,4 +1,10 @@
 if has('nvim')
+  if has('mac')
+    source $VIMRUNTIME/macmap.vim
+  endif
+endif
+
+if has('nvim')
   call plug#begin(stdpath('data') . '/plugged')
 else
   call plug#begin('~/.vim/plugged')
