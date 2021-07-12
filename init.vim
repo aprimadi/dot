@@ -20,7 +20,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'joeytwiddle/sexy_scroller.vim'
+" Plug 'joeytwiddle/sexy_scroller.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 " color schemes
@@ -33,6 +33,10 @@ Plug 'ayu-theme/ayu-vim'
 let g:cocPlugInstall = 'yarn install --frozen-lockfile'
 Plug 'weirongxu/coc-explorer', { 'tag': 'v0.13.11', 'do': cocPlugInstall }
 call plug#end()
+
+if has('unix')
+  set guifont=Hack:h13
+endif
 
 " set background=light
 colo two-firewatch
@@ -77,6 +81,9 @@ let g:vista#renderer#enable_icon = 0
 let g:vista_icon_indent = ["", ""]
 let g:vista_sidebar_width = 60
 
+let g:neovide_cursor_animation_length = 0.05
+let g:neovide_cursor_trail_length = 0.1
+
 " Tagbar setting
 let g:tagbar_type_scala = {
     \ 'ctagstype' : 'scala',
@@ -109,6 +116,22 @@ else
 endif
 nmap <space>e :CocCommand explorer<CR>
 
+
+" Fix pasting and copy
+if has('unix')
+  if has("clipboard")
+    " CTRL-C is copy
+    vnoremap <C-C> "+y
+
+    " CTRL-SHIFT-V and SHIFT-Insert are Paste
+    " map <S-Insert>	"+gP
+  endif
+
+  nnoremap <special> <S-Insert> "+gP
+  cnoremap <special> <S-Insert> <C-R>+
+  execute 'vnoremap <script> <special> <S-Insert>' paste#paste_cmd['v']
+  execute 'inoremap <script> <special> <S-Insert>' paste#paste_cmd['i']
+endif
 
 
 
