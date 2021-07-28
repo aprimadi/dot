@@ -31,8 +31,19 @@ Plug 'ajmwagar/vim-deus'
 Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
-if has('unix')
-  set guifont=Hack:h13
+" Detect OS
+if !exists("g:os")
+  if has("win64") || has("win32") || has("win16")
+    let g:os = "Windows"
+  else
+    let g:os = substitute(system('uname'), '\n', '', '')
+  endif
+endif
+
+if has("gui_running")
+  if g:os == "Linux"
+    set guifont=Hack:h13
+  endif
 endif
 
 " set background=light
