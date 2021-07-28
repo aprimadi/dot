@@ -167,6 +167,7 @@ module.exports = {
     localPlugins: [],
     keymaps: {
         "tab:next": [
+            "cmd+shift+l",
             "ctrl+shift+l",
             "ctrl+shift+]",
             "ctrl+shift+right",
@@ -174,6 +175,7 @@ module.exports = {
             "ctrl+tab"
         ],
         "tab:prev": [
+            "cmd+shift+h",
             "ctrl+shift+h",
             "ctrl+shift+[",
             "ctrl+shift+left",
