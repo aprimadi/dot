@@ -29,9 +29,6 @@ Plug 'blueshirts/darcula'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ajmwagar/vim-deus'
 Plug 'ayu-theme/ayu-vim'
-
-let g:cocPlugInstall = 'yarn install --frozen-lockfile'
-Plug 'weirongxu/coc-explorer', { 'tag': 'v0.13.11', 'do': cocPlugInstall }
 call plug#end()
 
 if has('unix')
@@ -39,14 +36,14 @@ if has('unix')
 endif
 
 " set background=light
-colo two-firewatch
+" colo two-firewatch
 " colo darcula
 " colo solarized
 " colo deus
 " let ayucolor="light"
-" let ayucolor="mirage"
+let ayucolor="mirage"
 " let ayucolor="dark"
-" colo ayu
+colo ayu
 
 " Line numbering
 set nu
