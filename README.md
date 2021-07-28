@@ -27,3 +27,9 @@ Open nvim and run `PlugInstall` command
 :PlugInstall
 ```
 
+Link .hyper.js to `~/.hyper.js`:
+
+```
+ln -s $(pwd)/.hyper.js ~/.hyper.js
+```
+
