@@ -62,6 +62,8 @@ colo nord
 " Line numbering
 set nu
 
+set termguicolors
+
 " Folding
 set foldmethod=indent   
 set foldnestmax=10
