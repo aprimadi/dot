@@ -124,6 +124,7 @@ nmap <F6> :Vista!<CR>
 nmap <F8> :TagbarToggle<CR>
 if has('macunix')
   nmap <D-p> :FZF<CR>
+  nmap <c-p> :FZF<CR>
 else
   nmap <c-p> :FZF<CR>
 endif
