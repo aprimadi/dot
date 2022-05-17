@@ -9,11 +9,12 @@ if has('nvim')
 else
   call plug#begin('~/.vim/plugged')
 endif
+Plug 'tomlion/vim-solidity'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 Plug 'rking/ag.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'majutsushi/tagbar'
