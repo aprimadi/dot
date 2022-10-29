@@ -32,6 +32,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ajmwagar/vim-deus'
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'sainnhe/sonokai'
 call plug#end()
 
 " Detect OS
@@ -55,10 +56,11 @@ endif
 " colo solarized
 " colo deus
 " let ayucolor="light"
-" let ayucolor="mirage"
+let ayucolor="mirage"
 " let ayucolor="dark"
 " colo ayu
-colo nord
+" colo nord
+colo sonokai
 
 " Line numbering
 set nu
