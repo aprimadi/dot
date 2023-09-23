@@ -27,9 +27,8 @@ Open nvim and run `PlugInstall` command
 :PlugInstall
 ```
 
-Link .hyper.js to `~/.hyper.js`:
+Install extra coc packages
 
 ```
-ln -s $(pwd)/.hyper.js ~/.hyper.js
+:CocInstall coc-explorer
 ```
-
