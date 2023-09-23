@@ -5,6 +5,14 @@ Dot files (ctags, vim, ...)
 
 ## Installation
 
+### Setup tmux
+
+```bash
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+```
+
+### Setup nvim
+
 Install node (recommended using brew):
 
 ```bash
@@ -32,3 +40,11 @@ Install extra coc packages
 ```
 :CocInstall coc-explorer
 ```
+
+### Setup sway tiling manager
+
+```bash
+mkdir -p ~/.config/sway
+ln -s $(pwd)/.config/sway/config ~/.config/sway/config
+```
+
