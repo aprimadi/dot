@@ -43,8 +43,23 @@ Install extra coc packages
 
 ### Setup sway tiling manager
 
+Link sway config
+
 ```bash
 mkdir -p ~/.config/sway
 ln -s $(pwd)/.config/sway/config ~/.config/sway/config
 ```
 
+Link swaybar config
+
+```bash
+mkdir -p ~/.config/sway/config.d
+ln -s $(pwd)/.config/sway/config.d/90-bar.conf ~/.config/sway/config.d/90-bar.conf
+```
+
+Link waybar config
+
+```bash
+mkdir -p ~/.config/waybar
+ln -s $(pwd)/.config/waybar/config ~/.config/waybar/config
+```
